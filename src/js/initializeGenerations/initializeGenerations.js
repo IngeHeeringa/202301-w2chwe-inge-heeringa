@@ -1,4 +1,4 @@
-const initializeGrid = (rows, columns) => {
+const initializeGenerations = (rows, columns) => {
   if (rows < 3 && columns < 3) {
     return "The grid dimensions should be minimum 3x3";
   }
@@ -20,4 +20,4 @@ const initializeGrid = (rows, columns) => {
   return currentGenerationGrid;
 };
 
-export default initializeGrid;
+export default initializeGenerations;
