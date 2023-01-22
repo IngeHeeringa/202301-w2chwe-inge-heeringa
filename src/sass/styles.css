@@ -19,3 +19,13 @@ td {
 .alive {
   background-color: rgb(33, 33, 33);
 }
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+} /*# sourceMappingURL=styles.css.map */

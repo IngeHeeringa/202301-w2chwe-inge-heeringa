@@ -7,5 +7,5 @@ const columns = 20;
 const initialGeneration = initializeGeneration(rows, columns, true);
 const world = new World(rows, columns, initialGeneration);
 
-createGrid(rows, columns);
-setInterval(() => world.updateCurrentGeneration(), 1000);
+createGrid(rows, columns, world);
+setInterval(() => world.updateCurrentGeneration(world), 500);

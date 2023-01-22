@@ -1,5 +1,5 @@
-const createGrid = (rows, columns) => {
-  const world = document.querySelector(".world");
+const createGrid = (rows, columns, world) => {
+  const worldHtml = document.querySelector(".world");
   const grid = document.createElement("table");
   grid.setAttribute("class", "grid");
   for (let rowPosition = 0; rowPosition < rows; rowPosition++) {
@@ -7,10 +7,16 @@ const createGrid = (rows, columns) => {
     gridRow.setAttribute("class", "grid__row");
     for (let columnPosition = 0; columnPosition < columns; columnPosition++) {
       const cell = document.createElement("td");
-      cell.setAttribute(
-        "class",
-        `grid__cell dead ${rowPosition}_${columnPosition}`
-      );
+      cell.setAttribute("class", "dead");
+      cell.innerHTML = world.currentGeneration[rowPosition][columnPosition];
+
+      if (cell.innerText === "1") {
+        cell.classList.add("alive");
+        cell.classList.remove("dead");
+      } else {
+        cell.classList.add("dead");
+        cell.classList.remove("alive");
+      }
 
       gridRow.appendChild(cell);
     }
@@ -18,7 +24,7 @@ const createGrid = (rows, columns) => {
     grid.appendChild(gridRow);
   }
 
-  world.appendChild(grid);
+  worldHtml.appendChild(grid);
 };
 
 export default createGrid;
