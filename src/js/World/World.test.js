@@ -1,4 +1,3 @@
-/** @jest-environment jsdom */
 import World from "./World";
 
 describe("Given an object instance of World", () => {

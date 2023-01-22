@@ -8,8 +8,25 @@ const initialGeneration = initializeGeneration(rows, columns, true);
 const world = new World(rows, columns, initialGeneration);
 
 createGrid(rows, columns, world);
-setInterval(() => {
+
+const playButton = document.querySelector(".controls__button--play");
+const pauseButton = document.querySelector(".controls__button--pause");
+let updatedBoard;
+let isPaused = false;
+
+const updateWorld = () => {
   world.updateCurrentGeneration(world);
   document.querySelector(".world").innerHTML = "";
   createGrid(world.rows, world.columns, world);
-}, 500);
+};
+
+playButton.addEventListener("click", () => {
+  updatedBoard = setInterval(updateWorld, 500);
+
+  isPaused = false;
+});
+
+pauseButton.addEventListener("click", () => {
+  clearInterval(updatedBoard);
+  isPaused = false;
+});
