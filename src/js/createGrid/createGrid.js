@@ -4,18 +4,17 @@ const createGrid = (rows, columns, world) => {
   grid.setAttribute("class", "grid");
   for (let rowPosition = 0; rowPosition < rows; rowPosition++) {
     const gridRow = document.createElement("tr");
-    gridRow.setAttribute("class", "grid__row");
     for (let columnPosition = 0; columnPosition < columns; columnPosition++) {
       const cell = document.createElement("td");
-      cell.setAttribute("class", "dead");
+      cell.setAttribute("class", "grid__cell grid__cell--dead");
       cell.innerHTML = world.currentGeneration[rowPosition][columnPosition];
 
       if (cell.innerText === "1") {
-        cell.classList.add("alive");
-        cell.classList.remove("dead");
+        cell.classList.add("grid__cell--alive");
+        cell.classList.remove("grid__cell--dead");
       } else {
-        cell.classList.add("dead");
-        cell.classList.remove("alive");
+        cell.classList.add("grid__cell--dead");
+        cell.classList.remove("grid__cell--alive");
       }
 
       gridRow.appendChild(cell);
