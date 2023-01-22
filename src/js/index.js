@@ -24,9 +24,11 @@ playButton.addEventListener("click", () => {
   if (!isPaused) {
     updatedBoard = setInterval(updateWorld, 500);
   }
+
+  isPaused = true;
 });
 
 pauseButton.addEventListener("click", () => {
   clearInterval(updatedBoard);
-  isPaused = true;
+  isPaused = false;
 });
