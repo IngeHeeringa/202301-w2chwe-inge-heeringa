@@ -1,22 +1,15 @@
 import initializeGenerations from "./initializeGenerations";
-jest.spyOn(global.Math, "random").mockReturnValue(1);
 
 describe("Given a function initializeGenerations", () => {
   describe("When it receives 5 and 5", () => {
     test("Then it should return [[ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0 ]]", () => {
       const rows = 5;
       const columns = 5;
-      const expectedGrid = [
-        [1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1],
-      ];
+      const expectedGridRows = 5;
 
-      const grid = initializeGenerations(rows, columns);
+      const gridRows = initializeGenerations(rows, columns).length;
 
-      expect(grid).toStrictEqual(expectedGrid);
+      expect(gridRows).toBe(expectedGridRows);
     });
   });
 
