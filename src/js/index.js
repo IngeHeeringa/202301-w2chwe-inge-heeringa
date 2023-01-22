@@ -1,3 +1,4 @@
+import createGrid from "./createGrid/createGrid.js";
 import initializeGeneration from "./initializeGeneration/initializeGeneration.js";
 import World from "./World/World.js";
 
@@ -6,4 +7,5 @@ const columns = 20;
 const initialGeneration = initializeGeneration(rows, columns, true);
 const world = new World(rows, columns, initialGeneration);
 
+createGrid(rows, columns);
 setInterval(() => world.updateCurrentGeneration(), 1000);
