@@ -1,4 +1,3 @@
-import createGrid from "../createGrid/createGrid.js";
 import initializeGeneration from "../initializeGeneration/initializeGeneration.js";
 
 class World {
@@ -8,7 +7,7 @@ class World {
     this.currentGeneration = initialGeneration;
   }
 
-  updateCurrentGeneration(grid) {
+  updateCurrentGeneration() {
     const nextGeneration = initializeGeneration(this.rows, this.columns, false);
 
     for (
@@ -53,8 +52,6 @@ class World {
       }
     }
 
-    document.querySelector(".world").innerHTML = "";
-    createGrid(this.rows, this.columns, grid);
     this.currentGeneration = [...nextGeneration];
   }
 

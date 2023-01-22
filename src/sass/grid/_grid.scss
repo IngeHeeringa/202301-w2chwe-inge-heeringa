@@ -1,13 +1,6 @@
 @use "../variables/colors";
 @use "../variables/typography";
 
-.world {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
 .grid {
   border: 1px solid #fff;
 
