@@ -36,5 +36,8 @@
         ]
       }
     }
+  },
+  "dependencies": {
+    "@fontsource/vt323": "^4.5.10"
   }
 }

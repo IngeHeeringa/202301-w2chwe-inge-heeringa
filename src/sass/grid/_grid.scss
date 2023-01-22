@@ -1,3 +1,5 @@
+@use "../variables/colors";
+
 .world {
   display: flex;
   align-items: center;
@@ -10,12 +12,15 @@ td {
   height: 20px;
   border: 1px solid gray;
   border-radius: 5px;
+  text-align: center;
 }
 
 .dead {
-  background-color: #b7b7b7;
+  color: colors.$color-secondary;
+  background-color: colors.$color-primary;
 }
 
 .alive {
-  background-color: rgb(33, 33, 33);
+  color: colors.$color-primary;
+  background-color: colors.$color-secondary;
 }
