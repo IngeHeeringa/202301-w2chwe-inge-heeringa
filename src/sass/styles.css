@@ -1,3 +1,4 @@
+@import url("../../node_modules/@fontsource/vt323/index.css");
 .world {
   display: flex;
   align-items: center;
@@ -5,22 +6,22 @@
   min-height: 100vh;
 }
 
-td {
-  width: 20px;
-  height: 20px;
-  border: 1px solid gray;
-  border-radius: 5px;
-  text-align: center;
+.grid {
+  border: 1px solid #fff;
 }
-
-.dead {
-  color: #181818;
+.grid__cell {
+  min-width: 20px;
+  height: 20px;
+  text-align: center;
+  padding: 0;
+}
+.grid__cell--dead {
+  color: #000000;
   background-color: #dbdbdb;
 }
-
-.alive {
+.grid__cell--alive {
   color: #dbdbdb;
-  background-color: #181818;
+  background-color: #000000;
 }
 
 *,
@@ -31,4 +32,10 @@ td {
 
 body {
   margin: 0;
+}
+
+body {
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  background-color: #000000;
 } /*# sourceMappingURL=styles.css.map */
