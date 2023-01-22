@@ -1,4 +1,4 @@
-import initializeGeneration from "../initializeGeneration/initializeGeneration";
+import initializeGeneration from "../initializeGeneration/initializeGeneration.js";
 
 class World {
   constructor(rows, columns, initialGeneration) {
