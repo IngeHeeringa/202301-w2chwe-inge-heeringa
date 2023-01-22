@@ -1,0 +1,41 @@
+@import url("../../node_modules/@fontsource/vt323/index.css");
+.world {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.grid {
+  border: 1px solid #fff;
+}
+.grid__cell {
+  min-width: 20px;
+  height: 20px;
+  text-align: center;
+  padding: 0;
+}
+.grid__cell--dead {
+  color: #000000;
+  background-color: #dbdbdb;
+}
+.grid__cell--alive {
+  color: #dbdbdb;
+  background-color: #000000;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  background-color: #000000;
+} /*# sourceMappingURL=styles.css.map */

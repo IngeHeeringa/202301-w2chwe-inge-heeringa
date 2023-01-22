@@ -1,0 +1,30 @@
+@use "../variables/colors";
+@use "../variables/typography";
+
+.world {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.grid {
+  border: 1px solid #fff;
+
+  &__cell {
+    min-width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0;
+
+    &--dead {
+      color: colors.$color-secondary;
+      background-color: colors.$color-primary;
+    }
+
+    &--alive {
+      color: colors.$color-primary;
+      background-color: colors.$color-secondary;
+    }
+  }
+}
