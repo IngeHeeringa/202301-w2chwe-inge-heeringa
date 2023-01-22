@@ -9,7 +9,7 @@ const initializeGeneration = (rows, columns, random) => {
     generation[rowPosition] = [];
     for (let columnPosition = 0; columnPosition < columns; columnPosition++) {
       generation[rowPosition][columnPosition] = random
-        ? Math.round(Math.random() * 0.7)
+        ? Math.round(Math.random() * 0.6)
         : 0;
     }
   }
