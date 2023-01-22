@@ -21,12 +21,12 @@ const updateWorld = () => {
 };
 
 playButton.addEventListener("click", () => {
-  updatedBoard = setInterval(updateWorld, 500);
-
-  isPaused = false;
+  if (!isPaused) {
+    updatedBoard = setInterval(updateWorld, 500);
+  }
 });
 
 pauseButton.addEventListener("click", () => {
   clearInterval(updatedBoard);
-  isPaused = false;
+  isPaused = true;
 });
