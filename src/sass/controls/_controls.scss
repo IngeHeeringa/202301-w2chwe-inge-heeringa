@@ -1,0 +1,12 @@
+@use "../variables/colors";
+
+.controls {
+  display: flex;
+  gap: 3rem;
+
+  &__button {
+    color: colors.$color-primary;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+}

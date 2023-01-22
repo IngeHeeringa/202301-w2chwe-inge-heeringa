@@ -2,3 +2,5 @@
 node_modules
 .parcel-cache
 dist
+src/sass/styles.css
+src/sass/styles.css.map
